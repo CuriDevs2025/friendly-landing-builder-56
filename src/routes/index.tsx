@@ -1,24 +1,56 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { SiteHeader } from "@/components/landing/site-header";
+import { Hero } from "@/components/landing/hero";
+import { About } from "@/components/landing/about";
+import { Programs } from "@/components/landing/programs";
+import { Coverage } from "@/components/landing/coverage";
+import { Requirements } from "@/components/landing/requirements";
+import { Steps } from "@/components/landing/steps";
+import { QuoteBand } from "@/components/landing/quote-band";
+import { Dates } from "@/components/landing/dates";
+import { Faq } from "@/components/landing/faq";
+import { Contact } from "@/components/landing/contact";
+import { FinalCta } from "@/components/landing/final-cta";
+import { SiteFooter } from "@/components/landing/site-footer";
+import { FloatingCta } from "@/components/landing/floating-cta";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
+const TITLE = "Horizontes Globales | Movilidad internacional Continental";
+const DESCRIPTION =
+  "Horizontes Globales cofinancia experiencias académicas internacionales para estudiantes de Continental. Conoce requisitos, cobertura, fechas y postula a la convocatoria 2026.";
+
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="min-h-screen bg-background">
+      <SiteHeader />
+      <main>
+        <Hero />
+        <About />
+        <Programs />
+        <Coverage />
+        <Requirements />
+        <Steps />
+        <QuoteBand />
+        <Dates />
+        <Faq />
+        <Contact />
+        <FinalCta />
+      </main>
+      <SiteFooter />
+      <FloatingCta />
     </div>
   );
 }
