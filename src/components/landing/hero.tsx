@@ -2,7 +2,17 @@ import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-horizontes.jpg";
 import { APPLY_URL } from "@/lib/landing-data";
 
-const FLAGS = ["🇺🇸", "🇪🇸", "🇧🇷", "🇦🇷", "🇨🇱", "🇨🇴", "🇨🇷", "🇲🇽", "🇵🇾"];
+const COUNTRIES = [
+  { code: "US", name: "Estados Unidos" },
+  { code: "ES", name: "España" },
+  { code: "BR", name: "Brasil" },
+  { code: "AR", name: "Argentina" },
+  { code: "CL", name: "Chile" },
+  { code: "CO", name: "Colombia" },
+  { code: "CR", name: "Costa Rica" },
+  { code: "MX", name: "México" },
+  { code: "PY", name: "Paraguay" },
+];
 
 export function Hero() {
   return (
