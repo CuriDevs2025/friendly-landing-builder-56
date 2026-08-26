@@ -5,8 +5,8 @@ import { cn } from "@/lib/utils";
 import { Reveal, SectionTag } from "./reveal";
 
 export function Requirements() {
-  const [active, setActive] = useState(REQUIREMENTS[0].id);
-  const current = REQUIREMENTS.find((r) => r.id === active) ?? REQUIREMENTS[0];
+  const [active, setActive] = useState(REQUIREMENTS[0]!.id);
+  const current = REQUIREMENTS.find((r) => r.id === active) ?? REQUIREMENTS[0]!;
 
   return (
     <section id="requisitos" className="bg-surface py-24">

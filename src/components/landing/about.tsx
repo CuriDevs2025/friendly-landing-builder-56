@@ -34,7 +34,7 @@ export function About() {
 
         <div className="mt-14 grid gap-5 md:grid-cols-3">
           {PILLARS.map((pillar, i) => {
-            const Icon = ICONS[i];
+            const Icon = ICONS[i] ?? Globe2;
             return (
               <Reveal key={pillar.title} delay={i * 90}>
                 <article className="card-soft h-full rounded-2xl border border-border p-7">
