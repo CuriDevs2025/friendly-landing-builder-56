@@ -45,11 +45,17 @@ export function Hero() {
           en otro país con el cofinanciamiento de Continental International Education.
         </p>
 
-        <div className="mt-7 flex flex-wrap gap-2 text-2xl" aria-hidden="true">
-          {FLAGS.map((flag) => (
-            <span key={flag}>{flag}</span>
+        <ul className="mt-8 flex flex-wrap gap-2">
+          {COUNTRIES.map((country) => (
+            <li
+              key={country.code}
+              title={country.name}
+              className="flex size-10 items-center justify-center rounded-full border border-border bg-secondary/70 text-[0.7rem] font-bold tracking-[0.06em] text-celeste backdrop-blur"
+            >
+              {country.code}
+            </li>
           ))}
-        </div>
+        </ul>
 
         <div className="mt-9 flex flex-wrap gap-3">
           <a
