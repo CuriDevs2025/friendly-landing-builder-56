@@ -2,6 +2,7 @@ import cardMisiones from "@/assets/card-misiones.jpg";
 import cardCorta from "@/assets/card-corta-duracion.jpg";
 import cardPasantias from "@/assets/card-pasantias.jpg";
 import { Reveal, SectionTag } from "./reveal";
+import { Download } from "lucide-react";
 
 const PROGRAMS = [
   {
@@ -37,6 +38,19 @@ export function Programs() {
             Dependiendo de la convocatoria, Horizontes Globales puede aplicarse a distintas
             modalidades de movilidad internacional.
           </p>
+          <div className="mt-10 flex items-center justify-start">
+            <a
+              href="/_CATALOGO - MISIONES ACADÉMICAS HORIZONTES GLOBALES (3).pdf"
+              download="Catalogo_Horizontes_Globales.pdf"
+              className="group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3.5 font-bold text-white shadow-[0_0_20px_rgba(6,182,212,0.3)] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(6,182,212,0.5)]"
+            >
+              <div className="absolute inset-0 flex h-full w-full justify-center [transform:skew(-12deg)_translateX(-150%)] group-hover:duration-1000 group-hover:[transform:skew(-12deg)_translateX(150%)]">
+                <div className="relative h-full w-8 bg-white/20" />
+              </div>
+              <Download className="size-5 transition-transform group-hover:-translate-y-0.5" />
+              <span>Descargar Catálogo PDF</span>
+            </a>
+          </div>
         </Reveal>
 
         <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
