@@ -17,20 +17,22 @@ export function SiteHeader() {
   return (
     <header
       className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "border-b border-border bg-background/85 backdrop-blur-md" : "bg-transparent",
+        "fixed inset-x-0 top-0 z-50 transition-all duration-300",
+        scrolled
+          ? "border-b border-border bg-background/85 backdrop-blur-md text-foreground"
+          : "bg-white/20 backdrop-blur-sm border-b border-black/5 text-zinc-900",
       )}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-5 py-4 lg:px-10">
         <a href="#top" className="flex items-center gap-3">
-          <span className="display-title text-xl leading-none text-foreground">
+          <span className={cn("display-title text-xl leading-none transition-colors", scrolled ? "text-foreground" : "text-zinc-950")}>
             Horizontes
-            <span className="block text-[0.7rem] font-semibold tracking-[0.3em] text-celeste">
+            <span className={cn("block text-[0.7rem] font-semibold tracking-[0.3em]", scrolled ? "text-celeste" : "text-[#6b11d4]")}>
               Globales
             </span>
           </span>
-          <span className="hidden h-8 w-px bg-border sm:block" />
-          <span className="hidden text-[0.62rem] font-semibold uppercase leading-tight tracking-[0.18em] text-muted-foreground sm:block">
+          <span className={cn("hidden h-8 w-px sm:block", scrolled ? "bg-border" : "bg-black/15")} />
+          <span className={cn("hidden text-[0.62rem] font-semibold uppercase leading-tight tracking-[0.18em] sm:block", scrolled ? "text-muted-foreground" : "text-zinc-700")}>
             Continental
             <br />
             International Education
@@ -42,7 +44,7 @@ export function SiteHeader() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              className="text-sm text-foreground/80 transition-colors hover:text-celeste"
+              className={cn("text-sm font-medium transition-colors", scrolled ? "text-foreground/80 hover:text-celeste" : "text-zinc-800 hover:text-[#6b11d4]")}
             >
               {item.label}
             </a>
@@ -51,7 +53,7 @@ export function SiteHeader() {
             href={APPLY_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark"
+            className="rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary-dark shadow-sm"
           >
             Postula
           </a>
@@ -61,7 +63,7 @@ export function SiteHeader() {
           type="button"
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           onClick={() => setOpen((v) => !v)}
-          className="rounded-md p-2 text-foreground lg:hidden"
+          className={cn("rounded-md p-2 lg:hidden", scrolled ? "text-foreground" : "text-zinc-900")}
         >
           {open ? <X className="size-6" /> : <Menu className="size-6" />}
         </button>
