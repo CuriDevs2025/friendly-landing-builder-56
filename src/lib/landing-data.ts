@@ -1,5 +1,5 @@
 export const APPLY_URL =
-  "https://docs.google.com/spreadsheets/d/1_Hqk1I4mOwfWbhfuW722ULDYHElVcbK3_l8FEX0YaVQ/edit?gid=0#gid=0";
+  "https://forms.gle/WaVKqsivTLDQfhbr8";
 
 export const NAV_ITEMS = [
   { id: "conoce", label: "Conócenos" },
