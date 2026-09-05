@@ -168,7 +168,7 @@ export const FAQS = [
   },
   {
     q: "¿Dónde puedo resolver mis dudas?",
-    a: "Escríbenos a nuestros canales de atención de lunes a viernes de 9:00 a. m. a 1:00 p. m. y de 3:00 p. m. a 6:00 p. m. Encuentra los correos del equipo en la sección de contacto.",
+    a: "Escríbenos a nuestros canales de atención de lunes a viernes de 9:00 a. m. a 1:00 p. m. y de 3:00 p. m. a 6:00 p. m. Encuentra nuestros canales oficiales de WhatsApp y correo institucional en la sección de contacto.",
   },
 ];
 
